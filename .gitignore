@@ -1,0 +1,58 @@
+# Ignore node_modules folder in Angular app
+ClientApp/node_modules/
+ClientApp/.angular
+# Ignore package folders in .NET Web API
+Rehber/.nuget/
+Rehber/packages/
+Rehber/obj/
+Rehber/bin/
+Rehber/Debug/
+Rehber/Release/
+
+# Ignore Visual Studio files
+Rehber/*.sln
+Rehber/*.csproj
+Rehber/*.user
+
+# Ignore build artifacts
+Rehber/obj/
+Rehber/bin/
+
+# Ignore environment-specific files
+Rehber/appsettings.Development.json
+Rehber/appsettings.Production.json
+Rehber/appsettings.Staging.json
+
+# Ignore generated files
+Rehber/appsettings*.json
+Rehber/appsettings*.json*
+Rehber/*.dbmdl
+
+# Ignore logs
+Rehber/Logs/
+
+# Ignore NuGet package restore files
+Rehber/packages.lock.json
+Rehber/nuget.config
+Rehber/.nuget/
+Rehber/.*proj.nuget.cache
+
+# Ignore temporary files
+Rehber/[Tt]emp/
+Rehber/[Oo]bj/
+
+# Ignore user-specific files
+Rehber/*.user
+
+# Ignore Visual Studio files
+Rehber/*.sln
+Rehber/*.csproj
+Rehber/obj/
+
+# Ignore .NET Core files
+Rehber/*.csproj.user
+Rehber/Properties/launchSettings.json
+
+# Ignore build artifacts
+Rehber/bin/
+Rehber/obj/

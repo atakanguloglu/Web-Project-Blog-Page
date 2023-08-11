@@ -1,0 +1,98 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom mb-3">
+      <div class="container grid justify-content-space-between">
+        <div>
+          <a class="navbar-brand" href="#">Gezi Blog</a>
+        </div>
+
+        <form class="d-flex" (ngSubmit)="search()">
+          <input
+            class="form-control search-input"
+            type="search"
+            name="query"
+            placeholder="Search Blogs"
+            aria-label="Search"
+            [(ngModel)]="query"
+            style="border-radius: 6px; width: 300px; margin-right: 10px;"
+          />
+
+          <button class="btn btn-dark search-button" type="submit">
+            <span style="color: #f9a825;">Search</span>
+          </button>
+        </form>
+
+        <div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul
+              class="navbar-nav ms-auto justify-content-around align-items-center"
+            >
+            <li class="nav-item">
+              <a
+              type="button"
+              class="btn btn-dark rounded-pill py-2 px-4 me-3"
+              data-toggle="modal"
+              data-target="#Modal"
+              href="/new"
+              style="color: #f9a825;"
+            >
+              Create New
+              <i class="fa fa-plus p-0 m-0"></i>
+            </a>
+
+              </li>
+
+              <li class="nav-item">
+                <a
+                  *ngIf="!isAuthenticated"
+                  class="btn me-4 text-dark"
+                  href="/login"
+
+                >
+                  Login
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  *ngIf="!isAuthenticated"
+                  class="btn btn-warning text-light"
+                  href="/signup"
+                  >Sign Up</a
+                >
+              </li>
+              <li *ngIf="isAuthenticated" class="d-flex align-items-center">
+
+                <div class="user-icon">
+                  <i class="fa fa-user user-button" style="font-size: 24px; color: #f9a825;"></i>
+                </div>
+
+
+
+                <div id="popover-content" style="display: none">
+                  <div class="popover-content-inner">
+                    <p>{{ fullName }}</p>
+                    <div class="d-flex flex-column">
+                      <a href="/my-cards" class="btn btn-dark btn-sm mb-2"
+                        >Bloglarım</a
+                      >
+                      <a id="logout" class="btn btn-danger btn-sm"> Logout </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </header>

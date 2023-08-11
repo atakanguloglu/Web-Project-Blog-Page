@@ -1,0 +1,36 @@
+<div
+  class="card m-4 py-4 border-0 align-items-center"
+  [ngClass]="{
+    normal: renderStyle === 'normal',
+    reversed: renderStyle === 'reversed'
+  }"
+>
+  <div>
+    <img [src]="image" alt="Guide 1" />
+  </div>
+  <div class="card-body">
+    <div *ngIf="" class="gezi-plus-badge">
+      <span>Gezi Rehberi Plus</span>
+    </div>
+    <div *ngIf="isguides" class="gezi-guides-badge">
+      <span>Guides</span>
+    </div>
+    <h1 class="card-title pb-4">{{ title }}</h1>
+    <p class="card-text text-secondary">{{ description }}</p>
+    <ng-content></ng-content>
+    <div *ngIf="description?.includes('iOS')" class="btn download mt-2">
+      <img
+        src="https://www.pngmart.com/files/10/Download-On-The-App-Store-PNG-Image.png"
+      />
+    </div>
+    <div *ngIf="description?.includes('iOS')" class="btn download mt-2">
+      <img
+        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+      />
+    </div>
+
+    <a href="/dashboard" *ngIf="buttonText" class="btn btn-dark mt-2">{{
+      buttonText
+    }}</a>
+  </div>
+</div>

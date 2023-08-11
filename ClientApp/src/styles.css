@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400&family=Roboto:wght@100;300;400&display=swap');
+
+/* Provide sufficient contrast against white background */
+* {
+  font-family: 'Geologica', "Roboto", --apple-system, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #0366d6;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+

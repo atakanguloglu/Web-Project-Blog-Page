@@ -1,0 +1,64 @@
+.collection-list {
+  display: flex;
+  flex-direction: row; /* Değişiklik */
+  flex-wrap: wrap; /* Değişiklik */
+  justify-content: space-between; /* Değişiklik */
+  align-items: flex-start; /* Değişiklik */
+}
+
+.collection-card {
+  width: calc(50% - 10px); /* Değişiklik */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collection-card.selected-card {
+  width: calc(100% - 20px); /* Değişiklik */
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.collection-card img {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.collection-card h3 {
+  margin: 0;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collection-card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.user-info .fa-user {
+  margin-right: 6px;
+}

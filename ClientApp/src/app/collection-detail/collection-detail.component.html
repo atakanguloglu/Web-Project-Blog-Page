@@ -1,0 +1,32 @@
+<app-nav-menu></app-nav-menu>
+<br><br><br><br><br>
+<div class="blogs-content">
+  <h2>{{ collection.name }}</h2>
+  <div class="blogs-container" *ngIf="showAllCards">
+    <div class="blogs" *ngFor="let blogs of collection.blogs">
+      <div class="blog-card" (click)="flipCard(blogs)">
+        <div class="front">
+          {{ blogs.front }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="text-center" *ngIf="!showAllCards">
+    <div class="blogs-header">
+      Blog Şehir Rehberi
+    </div>
+  </div><br><br>
+  <div class="blogs-container" *ngIf="!showAllCards">
+    <div
+      class="blogs-big"
+      *ngFor="let blogs of [collection.blogs[currentCardIndex]]"
+    >
+      <div class="blog-card" (click)="flipCard(blogs)">
+        <div class="front">
+          {{ blogs.front }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

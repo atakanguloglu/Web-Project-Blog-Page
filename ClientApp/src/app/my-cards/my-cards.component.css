@@ -1,0 +1,101 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Center the panel heading */
+.panel-heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Style the "Login" link */
+#forgot {
+  min-width: 100px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* Adjust label style for form-inline */
+form.inline-form label {
+  padding-left: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Style the signup button */
+.btn {
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+/* Style the panel */
+.panel {
+  min-height: 380px;
+  box-shadow: 20px 20px 80px rgb(115, 129, 114);
+  border-radius: 12px;
+  margin-top: 100px;
+}
+
+.input-field {
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #fffefe;
+  color: #4343ff;
+}
+
+.input-field.error {
+  border: 1px solid red;
+  color: red;
+}
+
+input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+img.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.collection {
+  position: relative;
+  padding: 20px; /* Kartın iç boşluğunu artırarak boyutunu büyüt */
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  border-radius: 20px; /* Daha belirgin oval köşeler */
+  box-shadow: 20px 20px 80px rgb(115, 129, 114);
+  margin-bottom: 20px; /* Alt boşluk */
+  overflow: hidden;
+}
+
+.collection a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px; /* Paragraf aralığı için alt boşluk ekleyin */
+}
+
+.collection a:hover {
+  text-decoration: underline;
+}
+
+.collection button {
+  margin-top: 5px;
+}

@@ -1,0 +1,116 @@
+/* Temel stil ayarları */
+.footer {
+  background-color: #343a40;
+  color: #f7f7f7;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-nav ul {
+  padding: 0;
+  flex-basis: calc(25% - 20px);
+  margin-right: 40px;
+}
+
+.footer-nav strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #f7f7f7;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #f9a825;
+}
+
+.footer-legal {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.footer-legal p {
+  margin: 0;
+  color: #f7f7f7;
+  text-align: center;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #f7f7f7;
+  font-size: 14px;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .footer-nav ul {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Yatayda ortala */
+  align-items: flex-end; /* Sağa hizala */
+  margin-top: 70px;
+  
+}
+
+.logo-container img {
+  max-width: 100px;
+  height: auto;
+  align-items: center;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #f7f7f7;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  color: #f9a825;
+}
+.logo-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}

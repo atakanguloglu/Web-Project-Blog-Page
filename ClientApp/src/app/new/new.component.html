@@ -1,0 +1,119 @@
+<app-nav-menu></app-nav-menu>
+<br><br><br>
+
+<form (submit)="onSubmit()" ngNativeValidate>
+  <div class="">
+    <div class="form-group">
+      <label for="collectionName">Blog Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="collectionName"
+        [(ngModel)]="collectionName"
+        required
+        name="first"
+        placeholder="Blog Title"
+      />
+    </div>
+
+    <!-- Display blogs -->
+    <hr />
+    <table *ngIf="blogs.length > 0">
+      <thead>
+        <tr>
+          <th>Yazı</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let blogs of blogs">
+          <ng-container *ngIf="blogs.index !== editingblogs?.index">
+            <td>{{ blogs.front }}</td>
+
+            <td>
+              <button
+                (click)="editblogs(blogs.index)"
+                class="btn btn-info btn-sm"
+              >
+                Edit
+              </button>
+            </td>
+            <td>
+              <button
+                (click)="deleteblogs(blogs.index)"
+                class="btn btn-danger btn-sm"
+              >
+                Delete
+              </button>
+            </td>
+          </ng-container>
+          <ng-container *ngIf="blogs.index === editingblogs?.index">
+            <td>
+              <input
+                type="text"
+                name="front"
+                [(ngModel)]="blogs.front"
+                class="form-control"
+              />
+            </td>
+
+            <td>
+              <button
+                class="btn btn-warning btn-sm"
+                (click)="
+                  updateblogs(
+                    blogs.index,
+                    blogs.front
+
+                  )
+                "
+              >
+                Update
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">
+                Cancel
+              </button>
+            </td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Add blogs form -->
+    <form
+      (submit)="
+        addblogs(frontInput.value);
+        frontInput.value = '';
+
+      "
+      ngNativeValidate
+    >
+    <div class="input-group-sm">
+      <textarea
+        class="form-control m-1"
+        type="text"
+        #frontInput
+        placeholder="Enter the front side of the blogs"
+        required
+      ></textarea></div>
+
+      <button type="submit" class="btn btn-success m-1">Add Blog Write</button>
+    </form>
+
+    <!-- Add other form inputs as needed -->
+  </div>
+  <div class="d-flex flex-row justify-content-end">
+    <a
+      type="button"
+      class="btn btn-secondary me-2"
+      data-dismiss="modal"
+      href="/dashboard"
+    >
+      Cancel
+    </a>
+    <button type="submit" class="btn btn-primary">Create Blog</button>
+  </div>
+</form>

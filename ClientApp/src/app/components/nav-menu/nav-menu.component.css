@@ -1,0 +1,77 @@
+/* Navbar stilleri */
+/* Navbar stilleri */
+.navbar {
+  background-color: #343a40; /* Koyu gri arka plan */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0; /* Alt ve üst boşlukları azaltarak Navbar'ı incelt */
+  width: 100%; /* Navbar'ın genişliğini 100% olarak ayarlayın */
+  position: fixed; /* Sabit pozisyon */
+  top: 0; /* Üst kenara hizala */
+  left: 0; /* Sol kenara hizala */
+  z-index: 1000; /* Diğer öğelerin üzerinde gösterin */
+  overflow: hidden;
+}
+
+
+/* Navbar marka stilleri */
+.navbar-brand {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: auto; /* Diğer öğelerin sağa itilmesi için */
+  margin-left: 20px; /* Sol boşluk eklemek için */
+}
+
+/* Navbar marka linki stilleri */
+.navbar-brand:hover {
+  color: #f7f7f7;
+}
+
+/* Navbar menü öğeleri stilleri */
+.navbar-nav .nav-link {
+  font-size: 16px;
+  color: #f7f7f7;
+  transition: color 0.3s;
+}
+
+/* Navbar menü öğeleri hover stilleri */
+.navbar-nav .nav-link:hover {
+  color: #f9a825; /* Altın sarısı rengi */
+}
+
+/* Arama kutusu stilleri */
+.form-control {
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+  color: #333;
+}
+
+/* Arama düğmesi stilleri */
+.btn-outline-light.text-black {
+  background-color: #f2f2f2;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Arama düğmesi hover stilleri */
+.btn-outline-light.text-black:hover {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Yeni Rehber ekle düğmesi stilleri */
+.btn-primary.btn-outline-light {
+  background-color: #f9a825;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Yeni Rehber ekle düğmesi hover stilleri */
+.btn-primary.btn-outline-light:hover {
+  background-color: #f7a600; /* Daha koyu bir altın sarısı */
+  color: #fff;
+}
